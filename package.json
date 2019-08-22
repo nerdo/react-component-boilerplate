@@ -1,0 +1,31 @@
+{
+  "name": "react-component-boilerplate",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/nerdo/react-component-boilerplate.git"
+  },
+  "version": "1.0.0-alpha.0",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "npm-install-peers": "^1.2.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
