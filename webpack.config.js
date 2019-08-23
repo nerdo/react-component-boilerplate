@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const package = require('./package.json')
 
 const env = {
   mode: !process.env.NODE_ENV ? 'development' : process.env.NODE_ENV
@@ -17,7 +18,7 @@ const externals = env.mode === 'development'
 const output = env.mode === 'development'
   ? {}
   : {
-    library: 'react-component-boilerplate',
+    library: package.name,
     libraryTarget: 'umd'
   }
 
@@ -25,8 +26,8 @@ const config = {
   entry,
   externals,
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: path.basename(package.main),
+    path: path.dirname(path.resolve(__dirname, package.main)),
     ...output
   },
   mode: env.mode,

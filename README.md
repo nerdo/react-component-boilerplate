@@ -9,6 +9,7 @@ While in the boilerplate repository path, run this command to create a fresh cop
 npx make-fresh-repo /path/to/new/repo
 ```
 
+## Setup
 Change into the new repository's directory and install the necessary modules:
 
 ```
@@ -16,11 +17,9 @@ cd /path/to/new/repo
 npm install && npx npm-install-peers
 ```
 
-## Setup
-* Edit `package.json`.
-    * Find and change the name, description, author, repository, license, etc. to values appropriate for your library.
-* Edit `webpack.config.js`.
-    * Find the line that reads `library: 'react-component-boilerplate'` and change `react-component-boilerplate` to the name of your library.
+Edit `package.json`. Find and change the name, description, author, repository, license, etc. to values appropriate for your library.
+
+Don't forget to also change the `README.md` and `LICENSE` files if necessary.
 
 ## Testing
 ```
