@@ -3,7 +3,18 @@
 A simple boilerplate setup for creating a React component library.
 
 ## Installation
-`npm install && npx npm-install-peers`
+While in the boilerplate repository path, run this command to create a fresh copy of the boilerplate, replacing `/path/to/new/repo` with an absolute or relative path to where you want the new repository to end up.
+
+```
+npx make-fresh-repo /path/to/new/repo
+```
+
+Change into the new repository's directory and install the necessary modules:
+
+```
+cd /path/to/new/repo
+npm install && npx npm-install-peers
+```
 
 ## Setup
 * Edit `package.json`.
@@ -12,7 +23,10 @@ A simple boilerplate setup for creating a React component library.
     * Find the line that reads `library: 'react-component-boilerplate'` and change `react-component-boilerplate` to the name of your library.
 
 ## Testing
-`npm run test` which simply runs `jest`... need I say more? :)
+```
+npm run test
+```
+...which simply runs `jest`... need I say more? :)
 
 ## Workflow
 Source code for the library should reside in the `src` directory.
@@ -21,7 +35,17 @@ Source code for the library should reside in the `src` directory.
 
 In order to facilitate working with your library as it would be used in a host application, a barebones React app is included in the `dev` directory. Its `index.js` is the entry point for the host test bed.
 
-Running `npm run dev` will start `webpack-dev-server` and serve content from the `dev` directory.
+For development, run
+
+```
+npm run dev
+```
+
+...which simply starts `webpack-dev-server` and serves content from the `dev` directory.
 
 ## Building
-`npm run build` will build the production version of the component to the `dist` directory.
+To build the production version of the component to the `dist` directory:
+
+```
+npm run build
+```
