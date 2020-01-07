@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Boilerplate } from '../src/index'
+import { Dev } from '../src/Dev'
 
-ReactDOM.render(<Boilerplate />, document.getElementById('root'))
+ReactDOM.render(<Dev />, document.getElementById('root'))
