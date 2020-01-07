@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { setupEnzyme } from './setupEnzyme'
-import { Dev } from './index'
+import { Dev } from './Dev'
 
 beforeAll(setupEnzyme)
 
