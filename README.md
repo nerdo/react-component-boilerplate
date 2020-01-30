@@ -34,13 +34,15 @@ Source code for the library should reside in the `src` directory.
 
 In order to facilitate working with your library as it would be used in a host application, a barebones React app is included in the `dev` directory. Its `index.js` is the entry point for the host test bed.
 
+It also contains a `Dev` component which is the component root for development purposes.
+
 For development, run
 
 ```
 npm run dev
 ```
 
-...which simply starts `webpack-dev-server` and serves content from the `dev` directory.
+...which simply starts `live-server` and serves content from the `dev` directory.
 
 ## Building
 To build the production version of the component to the `dist` directory:

@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { setupEnzyme } from './setupEnzyme'
+import { setupEnzyme } from '../src/setupEnzyme'
 import { Dev } from './Dev'
-import { Boilerplate } from './Boilerplate'
+import { Boilerplate } from '../src/Boilerplate'
 
 beforeAll(setupEnzyme)
 
