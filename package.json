@@ -10,7 +10,7 @@
   "main": "dist/Boilerplate.js",
   "scripts": {
     "test": "jest",
-    "dev": "NODE_ENV=dev rollup -c rollup.config.dev.js",
+    "dev": "NODE_ENV=dev rollup -c rollup.config.dev.js -w",
     "build": "NODE_ENV=production rollup -c rollup.config.js"
   },
   "devDependencies": {

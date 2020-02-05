@@ -2,10 +2,14 @@ import config from './rollup.config'
 import liveServer from 'rollup-plugin-live-server'
 import external from 'rollup-plugin-peer-deps-external'
 import resolve from '@rollup/plugin-node-resolve'
+import pkg from './package.json'
+
+// Find the output that matches what the main build
+const output = config.output.filter(o => o.file === pkg.main)[0]
 
 config.input = 'dev/index.js'
-config.output[0].file = 'dev/tmp/bundle.js'
-config.output[0].sourcemap = false
+output.file = 'dev/build/bundle.js'
+output.sourcemap = true
 
 // Plugin manipulation
 config.plugins.unshift(resolve())
@@ -16,7 +20,7 @@ config.plugins.unshift(
 )
 config.plugins.push(
     liveServer({
-      port: 8081,
+      port: 9090,
       host: '0.0.0.0',
       root: 'dev',
       mount: [
@@ -26,6 +30,8 @@ config.plugins.push(
       wait: 500
     })
 )
+
+// Remove terser
 config.plugins = config.plugins.filter(({name}) => name !== 'terser')
 
 export default config
