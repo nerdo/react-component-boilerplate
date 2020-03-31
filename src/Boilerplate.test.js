@@ -1,16 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { setupEnzyme } from './setupEnzyme'
 import { Boilerplate } from './Boilerplate'
 
-beforeAll(setupEnzyme)
-
 describe('Boilerplate', () => {
-  it('should exist', () => {
-    expect(Boilerplate).toBeDefined()
-  })
-  it('should render a <div />', () => {
+  it('should render a wrapping <div />', () => {
     const wrapper = shallow(<Boilerplate />)
-    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.at(0).name()).toEqual('div')
   })
 })
