@@ -1,5 +1,5 @@
 import React from 'react'
-import { Boilerplate } from './Boilerplate'
+import { Boilerplate } from '../src'
 
 export const Dev = function () {
   return <Boilerplate />
