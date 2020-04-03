@@ -13,7 +13,7 @@
     "dev": "parcel serve --cache-dir tmp/parcel-cache dev/index.html --open",
     "build": "parcel build --cache-dir tmp/parcel-cache src/index.js",
     "watch": "parcel watch --cache-dir tmp/parcel-cache src/index.js",
-    "view-source-map": "source-map-explorer dist/index.js dist/index.js.map --html tmp/source-map-explorer.html && npx http-server -o tmp/source-map-explorer.html",
+    "bundle-analyzer": "source-map-explorer dist/index.js dist/index.js.map --html tmp/bundle-analyzer.html && npx http-server -o tmp/bundle-analyzer.html",
     "clean": "rm -rf tmp package-lock.json node_modules dist"
   },
   "devDependencies": {
