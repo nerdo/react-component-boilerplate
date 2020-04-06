@@ -19,15 +19,19 @@ npm install
 
 Edit `package.json`. Find and change the name, description, author, repository, license, etc. to
 values appropriate for your library. You should also probably do a find in files to find references
-to `Boilerplate` and rename any of those boilerplate files to the name of your component.
+to `Boilerplate` and rename any of those files to the name of your component.
 
 Don't forget to also change the `README.md` and `LICENSE` files.
 
 ## Testing
+The boilerplate is configured with [Jest](https://jestjs.io) and [react-testing-library](https://github.com/testing-library/react-testing-library) which are [recommended testing tools for React](https://reactjs.org/docs/testing.html).
+
+To run tests, simply run...
 ```
 npm run test
 ```
-...which simply runs `jest`... need I say more? :)
+
+...which runs `jest`
 
 ## Workflow
 Source code for the library should reside in the `src` directory.
@@ -45,7 +49,7 @@ For development, run
 npm run dev
 ```
 
-...which simply starts `live-server` and serves content from the `dev` directory.
+...which spins up a web server, serving content from the `dev` directory.
 
 ### Development (external host)
 You may also want to develop your component inside an existing/external host app.
@@ -53,9 +57,8 @@ You may also want to develop your component inside an existing/external host app
 The best way to do this is to...
 
 1. Ensure you've edited your `project.json` and given your component the proper `name`.
-2. Run `npm link` inside of `/path/to/component/repo`. This will allow you to symlink your component
-   via npm using the `name` in `package.json`.
-3. Go to your host app and run `npm link NAME-IN-PACKAGE-JSON`.
+2. Run `npm link` inside of `/path/to/component/repo`. This will allow you to symlink your component via npm using the `name` in `package.json`.
+3. Go to your host app and run `npm link the-name-in-package-json`.
 
 For example:
 
