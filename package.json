@@ -8,6 +8,10 @@
   },
   "version": "0.0.1-alpha.0",
   "main": "dist/index.js",
+  "files": [
+    "index.js",
+    "index.js.map"
+  ],
   "scripts": {
     "test": "jest",
     "dev": "parcel serve --cache-dir tmp/parcel-cache dev/index.html --open",
@@ -24,7 +28,7 @@
     "@testing-library/react": "^10.0.2",
     "@testing-library/react-hooks": "^3.2.1",
     "babel-loader": "^8.0.6",
-    "jest": "^24.9.0",
+    "jest": "^26.0.1",
     "open-cli": "^6.0.1",
     "parcel": "^2.0.0-alpha.3.2",
     "react": "^16.12.0",
@@ -47,7 +51,12 @@
     },
     "presets": [
       [
-        "@babel/env"
+        "@babel/env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
       ],
       [
         "@babel/preset-react"
