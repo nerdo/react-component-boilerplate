@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import { Dev } from './Dev'
 
 describe('Dev', () => {
-  it('should render a Boilerplate component', () => {
+  it('should render', () => {
     const { container } = render(<Dev />)
     expect(container).toBeDefined()
   })
