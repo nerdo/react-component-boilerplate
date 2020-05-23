@@ -1,9 +1,7 @@
 import React from 'react'
 
-export const Boilerplate = function () {
-  return (
-    <div>
-      Boilerplate
-    </div>
-  )
-}
+export const Boilerplate = () => (
+  <div>
+    Boilerplate
+  </div>
+)
