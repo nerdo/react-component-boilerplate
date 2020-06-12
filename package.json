@@ -8,57 +8,48 @@
   },
   "version": "0.0.1-alpha.0",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "files": [
+    "index.esm.js",
+    "index.esm.js.map",
     "index.js",
-    "index.js.map"
+    "index.js.map",
+    "index.modern.js",
+    "index.modern.js.map",
+    "index.umd.js",
+    "index.umd.js.map"
   ],
   "scripts": {
     "test": "jest",
-    "dev": "parcel serve --cache-dir tmp/parcel-cache dev/index.html --open",
-    "build": "parcel build --cache-dir tmp/parcel-cache src/index.js",
-    "watch": "parcel watch --cache-dir tmp/parcel-cache src/index.js",
-    "bundle-analyzer": "source-map-explorer dist/index.js dist/index.js.map --html tmp/bundle-analyzer.html && open-cli tmp/bundle-analyzer.html",
-    "clean": "rm -rf tmp package-lock.json node_modules dist"
+    "dev": "concurrently npm:watch npm:serve",
+    "serve": "http-server dev",
+    "build": "microbundle --jsx React.createElement",
+    "watch": "microbundle --jsx React.createElement -w"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.7.0",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@testing-library/jest-dom": "^5.8.0",
-    "@testing-library/react": "^10.0.2",
-    "@testing-library/react-hooks": "^3.2.1",
-    "@testing-library/user-event": "^10.3.5",
-    "babel-loader": "^8.0.6",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@testing-library/jest-dom": "^5.10.0",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^11.4.2",
+    "babel-jest": "^26.0.1",
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3",
     "jest": "^26.0.1",
-    "open-cli": "^6.0.1",
-    "parcel": "^2.0.0-alpha.3.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-test-renderer": "^16.12.0",
-    "source-map-explorer": "^2.4.2",
-    "standard": "^14.3.3"
+    "microbundle": "^0.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "standard": "^14.3.4"
   },
   "peerDependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-modules-commonjs"
-        ]
-      }
-    },
     "presets": [
       [
-        "@babel/env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
+        "@babel/env"
       ],
       [
         "@babel/preset-react"
