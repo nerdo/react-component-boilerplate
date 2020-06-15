@@ -11,24 +11,17 @@
   "umd:main": "dist/react-component-boilerplate.umd.js",
   "module": "dist/react-component-boilerplate.m.js",
   "esmodule": "dist/react-component-boilerplate.modern.js",
-  "types": "dist/react-component-boilerplate.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/react-component-boilerplate.js",
-    "dist/react-component-boilerplate.js.map",
-    "dist/react-component-boilerplate.umd.js",
-    "dist/react-component-boilerplate.umd.js.map",
-    "dist/react-component-boilerplate.m.js",
-    "dist/react-component-boilerplate.m.js.map",
-    "dist/react-component-boilerplate.modern.js",
-    "dist/react-component-boilerplate.modern.js.map",
-    "dist/react-component-boilerplate.d.ts"
+    "dist/*"
   ],
   "scripts": {
     "test": "jest",
     "dev": "concurrently npm:watch npm:serve",
     "serve": "parcel serve --no-cache -d dev/build dev/index.html",
     "build": "microbundle --jsx React.createElement",
-    "watch": "microbundle --jsx React.createElement -w"
+    "watch": "microbundle --jsx React.createElement -w",
+    "preinstall": "jest && microbundle --jsx React.createElement"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -50,15 +43,5 @@
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/env"
-      ],
-      [
-        "@babel/preset-react"
-      ]
-    ]
   }
 }
