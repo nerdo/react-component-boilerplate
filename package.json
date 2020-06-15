@@ -7,17 +7,21 @@
     "url": "https://github.com/nerdo/react-component-boilerplate.git"
   },
   "version": "0.0.1-alpha.0",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/react-component-boilerplate.js",
+  "umd:main": "dist/react-component-boilerplate.umd.js",
+  "module": "dist/react-component-boilerplate.m.js",
+  "esmodule": "dist/react-component-boilerplate.modern.js",
+  "types": "dist/react-component-boilerplate.d.ts",
   "files": [
-    "index.esm.js",
-    "index.esm.js.map",
-    "index.js",
-    "index.js.map",
-    "index.modern.js",
-    "index.modern.js.map",
-    "index.umd.js",
-    "index.umd.js.map"
+    "dist/react-component-boilerplate.js",
+    "dist/react-component-boilerplate.js.map",
+    "dist/react-component-boilerplate.umd.js",
+    "dist/react-component-boilerplate.umd.js.map",
+    "dist/react-component-boilerplate.m.js",
+    "dist/react-component-boilerplate.m.js.map",
+    "dist/react-component-boilerplate.modern.js",
+    "dist/react-component-boilerplate.modern.js.map",
+    "dist/react-component-boilerplate.d.ts"
   ],
   "scripts": {
     "test": "jest",

@@ -1,4 +1,4 @@
 import React from 'react'
-import { Boilerplate } from '../dist'
+import { Boilerplate } from '../dist/react-component-boilerplate'
 
 export const Dev = () => <Boilerplate />
