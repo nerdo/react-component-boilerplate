@@ -21,7 +21,7 @@
     "serve": "parcel serve --no-cache -d dev/build dev/index.html",
     "build": "microbundle --jsx React.createElement",
     "watch": "microbundle --jsx React.createElement -w",
-    "prepublish": "jest && microbundle --jsx React.createElement"
+    "prepublishOnly": "jest && microbundle --jsx React.createElement"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
