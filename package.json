@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/nerdo/react-component-boilerplate.git"
   },
-  "version": "0.0.1-alpha.0",
+  "version": "1.0.0-alpha.0",
   "main": "dist/react-component-boilerplate.js",
   "umd:main": "dist/react-component-boilerplate.umd.js",
   "module": "dist/react-component-boilerplate.m.js",
