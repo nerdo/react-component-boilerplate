@@ -1,4 +1,4 @@
 import React from 'react'
-import { Boilerplate } from '../dist/react-component-boilerplate'
+import { Boilerplate } from '../src'
 
 export const Dev: React.FC = () => <Boilerplate />
