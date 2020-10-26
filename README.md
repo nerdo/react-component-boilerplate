@@ -56,7 +56,7 @@ You may also want to develop your component inside an existing/external host app
 
 The best way to do this is to...
 
-1. Ensure you've edited your `project.json` and given your component the proper `name`.
+1. Ensure you've edited your `package.json` and given your component the proper `name`.
 2. Run `npm link` inside of `/path/to/component/repo`. This will allow you to symlink your component via npm using the `name` in `package.json`.
 3. Go to your host app and run `npm link the-name-in-package-json`.
 
