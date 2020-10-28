@@ -2,6 +2,9 @@
   "compilerOptions": {
     "jsx": "react",
     "esModuleInterop": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node"
   }
 }
