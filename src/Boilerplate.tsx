@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Boilerplate: React.FC = () => {
+export const Boilerplate = () => {
   return (
     <div>
       Boilerplate
