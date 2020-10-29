@@ -51,6 +51,16 @@ npm run dev
 
 ...which spins up a web server, serving content from the `dev` directory.
 
+#### Adding dependencies as you develop
+This boilerplate is set up so that 3rd party libraries, like react, should be set up as peer dependencies so that the only thing in your bundle is your component code. Hosts using this component will need to install any peer dependencies within the host application.
+
+The built-in development environment mimics that so dependency management is a little different than usual.
+
+1. Install dependencies for development. In other words, run `npm install --save-dev` or `npm i -D` so that the package is added to `package.json` under `devDependencies`.
+2. Edit `package.json` and add the dependencies under `peerDependencies`. This does two things. It makes microbundle exclude that dependency from your bundle, and it is how any host applications will know what dependencies need to be installed along with this package.
+3. Edit `dev/serve/index.html` and add a `<script>` tag to load the browser-safe (UMD) module. React should already be there and can be used as a template.
+4. Edit `package.json` and locate the script for the `watch:dev` command and add any global dependencies. Towards the end of the command there should be a `--globals` option with a few comma-separated options already in place for react.  Add a global for the new dependencies. For example, if the dependency is `react-bootstrap` then the option might look like `--globals react=React,react-dom=ReactDOM,react-bootstrap=ReactBootstrap` where `ReactBootstrap` is the name of the globally available variable. This may not always be necessary, especially for dependencies that only provide CSS like `bootstrap`, though you would want to add a CSS `<link>` to the `dev/serve/index.html` to load it.
+
 ### Development (external host)
 You may also want to develop your component inside an existing/external host app.
 
