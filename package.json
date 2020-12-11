@@ -20,7 +20,7 @@
     "dev": "concurrently npm:watch:dev npm:serve",
     "serve": "serve -S dev/serve",
     "build": "microbundle --define process.env.NODE_ENV=production --jsx React.createElement",
-    "watch": "microbundle --define process.env.NODE_ENV=production --jsx React.createElement -w",
+    "watch": "npm run build; microbundle --define process.env.NODE_ENV=production --jsx React.createElement -w",
     "watch:dev": "microbundle --define process.env.NODE_ENV=development --jsx React.createElement -w -i dev/index.tsx -o dev/serve/build/dev.js -f umd --compress false --pkg-main false --external none",
     "prepublishOnly": "jest && microbundle --jsx React.createElement"
   },
